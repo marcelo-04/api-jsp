@@ -1,3 +1,6 @@
+-- Database: api-jsp
+
+-- DROP DATABASE "api-jsp";
 
 CREATE DATABASE "api-jsp"
     WITH 
@@ -7,12 +10,16 @@ CREATE DATABASE "api-jsp"
     LC_CTYPE = 'Portuguese_Brazil.1252'
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
-    
+
+==============================================================
+-- Table: public.model_login
+
+-- DROP TABLE public.model_login;
 
 CREATE TABLE public.model_login
 (
     login character varying(200) COLLATE pg_catalog."default",
-    password character varying(200) COLLATE pg_catalog."default",
+    senha character varying(200) COLLATE pg_catalog."default",
     CONSTRAINT login_unique UNIQUE (login)
         INCLUDE(login)
 )
@@ -22,7 +29,11 @@ TABLESPACE pg_default;
 ALTER TABLE public.model_login
     OWNER to postgres;
     
-
+===============================================================
 INSERT INTO public.model_login(
-	login, password)
+	login, senha)
 	VALUES ('admin', 'admin');
+
+    
+    
+    
