@@ -20,7 +20,7 @@ form {
 	position: absolute;
 	top: 40%;
 	left: 25%;
-	right: 25%
+	right: 25%;
 }
 
 h5 {
@@ -31,10 +31,12 @@ h5 {
 
 .msg {
 	position: absolute;
-	top: 70%;
+	top: 10%;
 	left: 25%;
 	font-size: 15px;
-	color: red;
+	color: #664d03;
+	background-color: #fff3cd;
+	border-color: #ffecb5;
 }
 </style>
 
@@ -47,26 +49,18 @@ h5 {
 		<input type="hidden" value="<%=request.getParameter("url")%>"
 			name="url">
 
-		<div class="col-md-6">
+		<div class="mb-3">
 			<label class="form-label">Login</label> <input class="form-control"
-				name="login" type="text" required="required">
-			<div class="valid-feedback">
-      			Ok!
-    		</div>
-    		<div class="invalid-feedback">
-      			Campo Obrigatório!
-    		</div>
+				name="login" type="text" required>
+			<div class="valid-feedback">Ok!</div>
+			<div class="invalid-feedback">Campo Obrigatório!</div>
 		</div>
 
-		<div class="col-md-6">
+		<div class="mb-3">
 			<label class="form-label">Senha</label> <input class="form-control"
-				name="senha" type="password" required="required">
-			<div class="valid-feedback">
-      			Ok!
-    		</div>
-    		<div class="invalid-feedback">
-      			Campo Obrigatório!
-    		</div>
+				name="senha" type="password" required>
+			<div class="valid-feedback">Ok!</div>
+			<div class="invalid-feedback">Campo Obrigatório!</div>
 		</div>
 
 		<input type="submit" class="btn btn-primary" value="Acessar">
@@ -76,12 +70,10 @@ h5 {
 	<h5 class="msg">${msg}</h5>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
-	<script
+	<script type="text/javascript"
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-		crossorigin="anonymous"></script>
-
-	<script type="text/javascript">
+		crossorigin="anonymous">
 		// Example starter JavaScript for disabling form submissions if there are invalid fields
 		(function() {
 			'use strict'
