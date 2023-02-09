@@ -33,8 +33,8 @@ public class ServletUsuarioController extends HttpServlet {
 			
 			String msg = "Operação realizada com sucesso!";
 
-			String id = request.getParameter("id");
-			String nome = request.getParameter("nome");
+			String id    = request.getParameter("id");
+			String nome  = request.getParameter("nome");
 			String email = request.getParameter("email");
 			String login = request.getParameter("login");
 			String senha = request.getParameter("senha");
@@ -51,6 +51,11 @@ public class ServletUsuarioController extends HttpServlet {
 					modelLogin.getId() == null) {
 				msg = "Usuário já existe, informe outro usuário";
 			} else {
+				if(modelLogin.isNovo()) {
+					msg = "Gravado com sucesso!";
+				} else {
+					msg = "Atualizado com sucesso!";
+				}
 				modelLogin = daoUsuarioRepository.gravarUsuario(modelLogin);
 			}
 			
